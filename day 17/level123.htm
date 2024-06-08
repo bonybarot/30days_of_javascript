@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("first")
+        localStorage.clear()
+       localStorage.setItem("first name" , "bony")
+       localStorage.setItem("last name" , "barot")
+       localStorage.setItem("age" , "22")
+       localStorage.setItem("country" , "india")
+       localStorage.setItem("city" , "kalol")
+
+       student ={
+        first_name :"bony",
+         last_name :"barot",
+          age:"22",
+          skills : ["html","css","js","react"],
+           country :"india",
+
+       }
+      let s = JSON.stringify(student)
+       localStorage.setItem("student_info",s)
+       console.log(localStorage)
+       var a = document.createElement("hi")
+       console.log(a)
+       console.log(document.body.appendChild(a))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

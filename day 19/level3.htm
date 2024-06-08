@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function personAccount(fname,lname,incomes,expenses) {
+          let  accountBalance = 0
+    function totalIncome() {
+        return incomes.reduce((a, b) => a + b)
+    }
+    function totalExpences() {
+        return expenses.reduce((a, b) => a + b)
+    }
+    //  addIncomes(newincomes) {
+    //     incomes.push(newincomes)
+    // }
+    //  addExpence(nExpence) {
+    //     expenses.push(nExpence)
+    // }
+    function checkAccountBalance() {
+        // return (incomes.reduce((a, b) => a + b))-(expenses.reduce((a, b) => a + b))
+        return (totalIncome())-(totalExpences())
+    }
+    function accountInfo() {
+        return `
+          ==>Account Info
+          Name : ${fname} ${lname}
+          Balance : ${checkAccountBalance()}
+          income : ${totalIncome()}
+          Expences : ${totalExpences()}
+        `
+    }
+    return{
+        accountInfo,totalIncome,totalExpences,checkAccountBalance
+
+    }
+   
+
+}
+const p1 =  personAccount("abc", "xyz", [2000, 5000, 6000], [1000, 5000])
+
+console.log(p1.totalIncome());
+console.log(p1.totalExpences());
+console.log(p1.totalIncome());
+p1.addExpence = 5000
+console.log(p1.totalExpences());
+console.log(p1.accountInfo());
+console.log(p1.checkAccountBalance());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

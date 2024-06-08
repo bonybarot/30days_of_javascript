@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printarray(a) {
+            let ar = ["dfg", "sdfg", "sdfggr"]
+            // a.forEach(element => {
+            //     console.log(element)
+            // });
+            for (let i of ar) {
+                console.log(i.toUpperCase())
+            }
+        }
+        function time() {
+            let d = new Date()
+            console.log(d.getDate() + " / " + d.getMonth() + " / " + d.getFullYear() + "  " + d.getHours() + " : " + d.getMinutes())
+        }
+        function sum(...b) {
+            // var sum = 0;
+            // for (var i = 0; i < arguments.length; i++) {
+            //     sum += arguments[i];
+            // }
+                let k = []
+                k.push(b)
+               j= k[0].reduce((a,b)=>(a)+(b))
+            console.log(j);
+        }
+        function colorGen() {
+            setInterval(() => {
+                document.getElementById("color1").style.backgroundColor = 'rgb(' +
+                    Math.floor(Math.random() * 100) + 1 + ',' + Math.floor(Math.random() * 175) + 1
+                    + ',' + Math.floor(Math.random() * 255) + 1 + ')';
+            }, 1);
+
+        }
+        function shufflear(ar) {
+             let s = []
+             let u =[]
+                let i = 0;
+                while(i<ar.length){
+                        let ran = Math.floor(Math.random()*ar.length)
+                        if(!u.includes(ran)){
+                                s.push(ar[ran]);
+                                u.push(ran);
+                                i++
+                            }
+                        }
+                        console.log(s)
+                    
+                }
+                function prime(){
+                    const number = parseInt(prompt("Enter a positive number: "));
+                    let isPrime = true;
+                    
+                    if (number === 1) {
+                        console.log("1 is neither prime nor composite number.");
+                    }
+                    
+                    else if (number > 1) {
+                        
+                        
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    
+    if (isPrime) {
+        console.log(`${number} is a prime number`);
+    } else {
+        console.log(`${number} is a not prime number`);
+    }
+}
+else {
+    console.log("The number is not a prime number.");
+}
+}
+function reverse(ar){
+    let c = []
+    for(i of ar){
+        c.push(i);
+    }
+    c.reverse();
+    console.log(c)
+}
+
+
+
+</script>
+</head>
+
+<body>
+    <textarea name="" id="color1" cols="30" rows="10"></textarea>
+    <button onclick="printarray()">
+        print capital
+    </button>
+    <button onclick="time()">show date & time</button>
+    <button onclick="colorGen()">generate random color</button>
+    <button onclick="sum(5,65,51,5,51,551,45,1,500,1)">array</button>
+    <button onclick="shufflear([5,4,2,8,3,9,3,9,2,3])">shufflear</button>
+    <button onclick="reverse([5,4,2,8,3,9,3,9,2,3])">reverse</button>
+    <button onclick="prime()">prime check</button>
+    
+</body>
+
+</html>

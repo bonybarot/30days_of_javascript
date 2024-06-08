@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let string  ='He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month'
+       let regEx = /\d+/g
+       let a = string.match(regEx)
+       let sum = 0
+       for(let i of a){
+        sum += (+i)
+       }
+       console.log(sum)
+
+
+//        const pattern = /[a]./g  // this square bracket means a and . means any character except new line
+// const txt = 'Apple and banana are fruits'
+// const matches = txt.match(pattern)
+
+// console.log(matches)  // ["an", "an", "an", "a ", "ar"]
+
+
+
+// const txt= 'I am not sure if there is a convention how to write the word e-mail.\
+// Some people write it email others may write it as Email or E-mail.'
+// const pattern = /[Ee]-?mail/g  // ? means optional
+// matches = txt.match(pattern)
+
+// console.log(matches)  // ["e-mail", "email", "Email", "E-mail"]
+
+const txt = 'This regular expression example was made in December 6,  2019.'
+const pattern = /\b\w{4}\b/g  //  exactly four character words
+const matches = txt.match(pattern)
+console.log(matches)  //['This', 'made', '2019']
+
+points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
+sortedPoints =  [-4, -3, -1, -1, 0, 2, 4, 8]
+distance = 12
+
+console.log(sortedPoints.length - sortedPoints[0])
+
+// is_valid_variable('first_name') # True
+// is_valid_variable('first-name') # False
+// is_valid_variable('1first_name') # False
+// is_valid_variable('firstname') # True
+
+       let fname = "1first_name"
+       const p = /[Ff]irst[Nn]ame|[Ff]irst_[Nn]ame/
+       console.log(fname.match(p))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

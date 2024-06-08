@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function random(){
+            let ran = ""
+            let char ="qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM";
+            
+            for (let i = 0; i < char.length; i++) {
+                ran += char.charAt(Math.floor(Math.random()*char.length))
+                
+            }
+        console.log(ran.slice(0,Math.floor(Math.random()*char.length)))
+    }
+    function wordlen(){
+            let a= ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+            for(let i of a){
+                console.log(i.length)
+            }
+        }
+    function wordar(){
+            let a= ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+            for(let i of a){
+                let u = i.toUpperCase()
+                console.log([i,u.slice(0,3),i.length])
+            }
+        }
+        function land(){
+            let a= ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+            let ar = []
+            let ab = []
+            for(let i of a){
+                if(i.includes("LAND")){
+                    ar.push(i)
+                }else{
+                   
+                    ab.push(i)
+                }
+            }
+          console.log(ar)
+          console.log( "this all countries are without land",ab)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="random()">random char generate</button>
+    <button onclick="wordlen()">word length</button>
+    <button onclick="wordar()">word array</button>
+    <button onclick="land()">land</button>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body{
+    background: rgb(48, 62, 114);
+}
+*{
+    color: aliceblue;
+}
+#Update{
+    display: none;
+}

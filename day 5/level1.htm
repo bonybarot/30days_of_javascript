@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Get the first item, the middle item and the last item of the array
+        let a =["a","b","c","d","e"];
+        console.log(a[0],a[(a.length-1)/2],a[a.length-1])
+// Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
+        const mixedDataTypes = [
+    'Asabeneh',
+    250,
+    true,
+    { country: 'Finland', city: 'Helsinki' },
+        "xyz",
+        null
+]
+console.log(mixedDataTypes.length)
+    //  Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+    let arr = ["Facebook", "Google", "Microsoft", "Apple", "IBM","Oracle" ]
+    let arsp = arr.join(",")
+    console.log(arsp + " are bg it companies")
+    // Change each company name to uppercase one by one and print them out
+    let arrr = ["Facebook", "Google", "Microsoft", "Apple", "IBM","Oracle" ]
+        // const rr = arrr.map((item) => item.toUpperCase())
+        // console.log(rr);
+    let br = []
+        for(let i of arrr){
+            br.push(i.toUpperCase());
+        }
+        console.log(br)
+    // Filter out companies which have more than one 'o' without the filter method
+    let ar = ["Facebook", "Google", "Microsoft", "Apple", "IBM","Oracle" ]
+    
+    // slice first and last three company
+    let b = ["Facebook", "Google", "Microsoft", "Apple", "IBM","Oracle" ]
+       console.log(b.slice(0,3))
+       console.log(b.slice(b.length-3,b.length))
+
+  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

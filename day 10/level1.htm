@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const a = [4, 5, 8, 9]
+const b = [3, 4, 5, 7]
+const country = ['Finland', 'Sweden', 'Norway']
+const languages = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French',
+]
+countries = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo'],
+]      
+let ab = new Set();
+for(let i = 0 ; i<11;i++){
+    ab.add(i)
+}
+console.log(ab)
+ab.delete(5)
+console.log(ab)
+ab.clear()
+console.log(ab)
+let ac = new Set(country)
+console.log(ac)
+
+let ad = new Map(countries)
+console.log(ad)
+for(let i of ad){
+    console.log(i[1]+" : "+i[1].length)
+}
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

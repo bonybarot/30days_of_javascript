@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: green;
+            font-size: 200px;
+            text-align: center;
+        }
+        .center {
+
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+        p{
+            padding: 10px;
+            background-color: white;
+            box-shadow: 5px 5px;
+            border: black solid;
+            width: 500px;
+            
+        }
+        #k{
+            font-size: 30px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+
+        <p>you pressed key : <span id="k"></span></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h1 id="h"></h1>
+
+
+    <script>
+        document.addEventListener("keypress",(e)=>{
+            document.getElementById("k").innerText = e.key
+            document.getElementById("h").innerText = e.key
+        })
+    </script>
+</body>
+</html>

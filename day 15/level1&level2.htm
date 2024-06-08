@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         class Person {
+//   constructor(firstName, lastName, age, country, city) {
+//     this.firstName = firstName
+//     this.lastName = lastName
+//     this.age = age
+//     this.country = country
+//     this.city = city
+//     this.score = 0
+//     this.skills = []
+//   }
+//   getFullName() {
+//     const fullName = this.firstName + ' ' + this.lastName
+//     return fullName
+//   }
+// }
+
+// const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+// const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+// console.log(person1.score)
+// console.log(person2.score)
+
+// console.log(person1.skills)
+// console.log(person2.skills)
+
+    class animal{
+        constructor(name, age, color, legs){
+            this.name = name, 
+            this.age = age, 
+            this.color = color, 
+            this.legs = legs
+        }
+        info(){
+           return `${this.name} is ${this.age} years old and it has ${this.legs} legs`
+        }
+      
+    }
+    class dog extends animal{
+       constructor(name, age, color, legs,animal){
+        super(name, age, color, legs)
+
+            this.animal = animal
+        
+        }
+        info(){
+           return `${this.name} is a ${this.animal} ${this.age} years old and it has ${this.legs} legs`
+        }
+    }
+    class cat extends animal{
+
+    }
+    console.log(new animal("bruno",4 ,"brown",4))
+    console.log(new dog("bruno",4 ,"brown",4,"dog").info())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //area of triangle
+        function triangle(){
+            
+            let h =   prompt("enter height" ,parseFloat())
+            let base =   prompt("enter base" ,parseFloat())
+            
+            console.log((h*base)/2);
+        }
+        //area of rectangle
+        function sum(){
+            let a = prompt();
+            let b = prompt();
+            let c = prompt();
+            console.log(( +a) +(+b)+(+c))
+        }
+        function rectangle(){
+            let length = parseInt(prompt("enter length",0))
+            let width = parseInt(prompt("enter width",0))
+            console.log(length*width)
+        }
+        function circle(){
+            let radius= parseFloat(prompt("enter radius"));
+            let pi = 3.14;
+            console.log(pi*(radius*radius))
+        }
+        function salary(){
+            let hr = parseInt(prompt("enter hours",0))
+            let rate = parseInt(prompt("enter rate/hr",0))
+            console.log("your weekly earning is : "+hr*rate)
+        }
+        function Name(){
+            let n = prompt("enter name");
+            // console.log(n.length)
+            if(n.length>7){console.log("long name")}else{console.log("short name")}
+        }
+        function fullname(){
+            let first = prompt("enter your first name")
+            let last = prompt("enter your last name")
+            if(first.length>last.length){
+                console.log(`your first name `+first + "is greater than your last name "+ last)
+            }else{
+
+                console.log(`your last name `+last + " is greater than your first name "+ first)
+            }
+        }
+        function drive(){
+            let yr = new Date().getFullYear()
+            let age = parseInt(prompt("enter your birth year",0))
+            let d = yr-age
+            if(yr-age>18 ){
+                console.log("you are "+d+" you can drive")
+            }else{
+
+                console.log("you are "+d+" you can not drive")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="triangle()">triangle</button>
+    <button onclick="sum()">sum</button>
+    <button onclick="rectangle()">rectangle</button>
+    <button onclick="circle()">circle</button>
+    <button onclick="salary()">calculate salary</button>
+    <button onclick="Name()">check name</button>
+    <button onclick="fullname()">full name check</button>
+    <button onclick="drive()">drive check</button>
+</body>
+</html>

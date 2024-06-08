@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function day(){
+
+            let a = prompt("enter month name");
+            let b = prompt("enter year");
+            let ab = ["january","march","may","july","august","october","december"];
+            let ac = ["april","june","september","november"]
+            let ad = "february"
+
+            if (a&&b!= null){
+                
+                if(b%4==0){
+                    if(ab.includes(a.toLowerCase())){
+                      
+                        console.log(a+" of "+b+" has 31 days")
+                    }else if(ac.includes(a.toLowerCase())){
+                        console.log(a+" of "+b+" has 30 days")
+                    }else if(ad.includes(a.toLowerCase())){
+                        console.log(a+" of "+b+" has 29 days")
+
+                    }
+                }else{
+                    if(ab.includes(a.toLowerCase())){
+                        console.log(a+" of "+b+" has 31 days")
+                    }else if(ac.includes(a.toLowerCase())){
+                        console.log(a+" of "+b+" has 30 days")
+                    }else if(ad.includes(a.toLowerCase())){
+                        console.log(a+" of "+b+" has 28 days")
+
+                    }
+                }
+            }
+            else{
+                console.log("first")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="day()">
+        check days of month
+    </button>
+</body>
+</html>

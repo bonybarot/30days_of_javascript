@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         const countriesAPI = 'https://restcountries.com/v2/all'
+//           const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+//           let fetchdata=async()=>{
+       
+//     const response = await fetch(countriesAPI)
+//     const c = await response.json()
+//     const sortable = Object.values(c.alpha2Code)
+//     .sort(([,a],[,b]) => a-b)
+//     .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+
+// console.log(sortable);
+//     // var k =[]
+//     // for (let i of c){
+//     //     // const sortable = Object.entries(i.area)
+//     //       // .sort(([,a],[,b]) => a-b)
+//     //       // .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+//     // //   k.push(Object.values(i))
+//     // console.log(i.area);
+//     // }
+//     }
+
+//     fetchdata()
+
+
+
+const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+
+const aveWeigth = async () => {
+    const res = await fetch(catsAPI)
+    const data = await res.json()
+    const entries = Object.values(data)
+    const weights = data.map((item) => parseInt(item.weight.metric))
+    const ave = weights.reduce((a, b) => a + b, 0) / weights.length
+    console.log(ave)
+    var k = []
+    for(let i of data){
+        k.push(i)
+        
+    }
+    let q = k.sort((a,b)=>(parseInt(a.weight.metric))-(parseInt(b.weight.metric)))
+    console.log(q);
+}
+aveWeigth()
+
+const countriesApi = "https://restcountries.com/v2/all"
+            
+            const getData = async () => {
+                const res = await fetch(countriesApi)
+                const data = await res.json()
+                const large = data.sort((a,b) => b.area -a.area)
+                // console.log(large);
+                const l = large.slice(0,10)
+                const arr = []
+                l.forEach(e => {
+                    arr.push(`${e.name} : ${e.area}`)
+                });
+                console.log(arr);
+            }
+            getData()
+
+
+            const Data = async () => {
+                const res = await fetch(countriesApi)
+                const data = await res.json()
+                let b = []
+               for (let i of data){
+                b.push(i.languages[0].name)
+
+            }
+            let z = new Set(b)
+            console.log(z);
+            }
+            Data()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

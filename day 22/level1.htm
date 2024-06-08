@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Object Model:30 Days Of JavaScript</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border: 2px solid;
+            text-align: center;
+            line-height: 100px;
+        }
+        body{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+        }
+    </style>
+</head>
+<body>
+</body>
+<script>
+let a =[]
+while(a.length<=99){
+  
+          let  d = document.createElement('div')
+        var num =Math.ceil(Math.random()*100) 
+        if(!a.includes(num)){
+            a.push(num)
+            d.textContent = num
+            document.body.appendChild(d)
+            for(let i =2;i<num;i++){
+                
+                    if(num%2==0){
+                        d.style.background = "green"
+                    }else{
+                        d.style.background = "yellow"
+
+                    }
+                }
+            }
+        }
+
+
+
+  
+
+</script>
+</html>

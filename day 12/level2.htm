@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Write a function called tenMostFrequentWords which get the ten most frequent word from a string?
+
+//         paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+//         let a =[]
+//         function tenMostFrequentWords(d){
+//                 let k = d.split(" ")
+//                 let a = d.match(p)
+                
+               
+
+//                 console.log(a)
+            
+//         }
+//    tenMostFrequentWords(paragraph)
+
+let paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+let tenMostFrequentWords = (text, range = 10) => {
+    
+    let pattern = /[a-z|A-Z]*/g;
+    return Object.entries(text.match(pattern).reduce((dict, word) => {
+        dict[word] = (dict[word] || 0) + 1;
+        return dict;
+    }, {})).sort((a, b) => b[1] - a[1]).slice(1, range);
+}
+tenMostFrequentWords(paragraph).forEach(x => console.log(x));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

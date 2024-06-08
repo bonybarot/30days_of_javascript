@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #divofboxes{
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .box:hover{
+            /* box-shadow: 2px 2px; */
+            background-color: rgb(255, 230, 220);
+        }
+        .box{
+            
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 150px;
+        }
+        #divone {
+            margin-left: 200px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #divtwo {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+            margin: auto;
+            background-color: rgb(245, 222, 215);
+            height: 50px;
+            width: 1200px;
+        }
+
+        .slideDown {
+            top: -40px;
+            left: 5px;
+            animation: slideDown ease .4s forwards .6s;
+            animation-duration: 4s;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(100px);
+                opacity: 1;
+            }
+        }
+        #tecnologies{
+            font-size: 70px;
+            color: rgb();
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divone">
+        <h1>
+            Asabeneh Yetayeah
+        </h1>
+    </div>
+    <div id="divtwo">
+
+        <h2>👍</h2>
+        <h2 class="slideDown" id="tags"></h2>
+    </div>
+    <div id="divthree">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quaerat cumque minus omnis tempora eligendi rem
+        vero eos est hic modi iste ipsum sint et ullam obcaecati, sit consequuntur numquam ea laborum optio suscipit,
+        magnam fugiat. Ullam aliquam excepturi eos veritatis quas reprehenderit quaerat incidunt dignissimos labore
+        corporis, voluptatibus distinctio explicabo mollitia nulla, adipisci fugit quisquam? Unde, nostrum alias quod
+        dignissimos minus ab fugit dolore repellendus minima, dolorum sapiente deserunt est eveniet earum voluptatum
+        nesciunt magnam ad, suscipit beatae laborum. Nulla aperiam exercitationem veniam cumque ex quas repudiandae unde
+        reprehenderit officiis? Doloremque fugiat non dolorum atque, facilis impedit est aliquam!
+
+        
+    </div>
+    <div id="divofboxes">
+        
+        <div class="box">javascript</div>
+        <div class="box">React</div>
+        <div class="box">Redux</div>
+    </div>
+    <div id="divfive">
+        tecnologies i learn <span id="tecnologies"></span>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

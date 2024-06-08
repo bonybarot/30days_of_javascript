@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         const a = [4, 5, 8, 9,4,3]
+         const b = [3, 4, 5, 7,4,5]
+        const c = [...a,...b]
+         let ab = new Set(c)
+         let A = new Set(a)
+         let B = new Set(b)
+         let C = new Set(a.filter((d)=>B.has(d))) 
+         let D = new Set(b.filter((d)=>!A.has(d))) 
+         let E = new Set(a.filter((d)=>!B.has(d))) 
+         let F = [...D,...E]
+         var union = [...new Set([...a, ...b])];
+         console.log(union);
+         console.log(ab)
+         console.log(C)
+         console.log(F)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

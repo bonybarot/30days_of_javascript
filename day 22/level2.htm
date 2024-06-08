@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           div{
+            width: 100px;
+            height: 80px;
+            margin: 5px;
+            border: 2px solid;
+            text-align: center;
+            padding-top: 20px;
+        }
+        body{
+          
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+    <script>
+              const countriesApi = "https://restcountries.com/v2/all"; 
+
+              fetch(countriesApi).then((re)=>re.json()).then((d)=>{
+                let a =[]
+                 for(let i of d){
+                    a.push(i.name)
+                 }
+                 for(let i of a){
+                     let  d = document.createElement('div')
+                     d.textContent = i
+                     document.body.appendChild(d)
+                    }
+                    
+                });
+    </script>
+</html>

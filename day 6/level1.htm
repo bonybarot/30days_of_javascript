@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Iterate 0 to 10 using for loop, do the same using while and do while loop
+        for (let index = 0; index <= 10; index++) {
+           console.log(index)
+            
+        }
+        let i=0;
+       while( i<=10){
+            console.log(i);
+            i++
+        };
+        let ind = 0 ;
+        
+        do{
+            console.log(ind)
+          ind++
+        }while(ind<=10)
+        for (let i = 0; i < 5; i++) {
+           for (let j = 0; j <=i; j++) {
+              document.write("*")
+              console.log("*")
+            }
+            document.write("</br>")
+            console.log("\n")
+            
+        }
+        // Write a loop that makes the following pattern using console.log():
+        for (let i = 0; i < 11; i++) {
+            for (let j = i; j <=i; j++) {
+               
+                var a = i+" x "+j+" = "+i*j 
+                console.log(a)  
+            }
+        }
+
+        for (let i = 0; i <=10; i++) {
+         for (let j = i; j <=i; j++) {
+            var a = j+"  "+j*j+" "+j*j*j 
+                console.log(a) 
+            
+         }
+            
+        }
+
+        // print sum of numbers
+        let k = 0;
+        for (let j = 0; j <=100; j++) {
+          k +=j;
+        }
+        console.log(k) 
+        // Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+        let b = 0;
+        let c= 0;
+        for (let j = 0; j <=100; j++) {
+            if(j%2==0){
+
+                b +=j;
+            }
+            if(j%2!==0){
+
+                c +=j;
+            }
+        }
+        console.log(b)
+        console.log(c)
+        let ar = []
+        for (let i = 0; i < 5; i++) {
+           ar.push(Math.floor(Math.random()*10))
+        }
+        console.log(ar)
+        let ran = ""
+        let char ="qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM";
+
+        for (let i = 0; i < char.length; i++) {
+          ran += char.charAt(Math.floor(Math.random()*char.length))
+            
+        }
+        console.log(ran.slice(0,5))
+     
+    </script>
+</head>
+<body>
+    <p id="p"></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a">first paragraph</p>
+    <p id="b">second paragraph</p>
+    <p id="c">third paragraph</p>
+    <p id="d">fourth paragraph dgadsesf aegfvadfg</p>
+</body>
+<script>
+        let a =document.querySelectorAll("p")
+        a.forEach((element,i) => {
+            
+            if (i%2==0){
+                element.style.color = "red"
+                element.style.background = "black"
+                element.style.border = "solid green"
+            }
+            else{
+                element.style.color = "gold"
+                element.style.background = "purple"
+                element.style.border = " green 1px"
+            }
+        });
+        a[0].textContent = "fsgsdg"
+        a[0].className = "fsgsdg"
+        a[0].id = "fsgsdg"
+        console.log(a)
+</script>
+</html>

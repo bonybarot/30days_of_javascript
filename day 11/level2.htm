@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const users = [
+{
+  name:'Brook',
+  scores:75,
+  skills:['HTM', 'CSS', 'JS'],
+  age:16
+},
+{
+  name:'Alex',
+  scores:80,
+  skills:['HTM', 'CSS', 'JS'],
+  age:18
+},
+{
+  name:'David',
+  scores:75,
+  skills:['HTM', 'CSS'],
+  age:22
+},
+{
+  name:'John',
+  scores:85,
+  skills:['HTML'],
+  age:25
+},
+{
+  name:'Sara',
+  scores:95,
+  skills:['HTM', 'CSS', 'JS'],
+  age: 26
+},
+{
+  name:'Martha',
+  scores:80,
+  skills:['HTM', 'CSS', 'JS'],
+  age:18
+},
+{
+  name:'Thomas',
+  scores:90,
+  skills:['HTM', 'CSS', 'JS'],
+  age:20
+}
+];
+
+ const getKeys = (obj) =>{
+   for (const key in obj) {
+     console.log(users[key]);
+   }
+}
+getKeys(users)
+
+const a = users.map((item) => item.skills)
+users.forEach(element => {
+    if(element.skills.length<2)
+    console.log(element.name)
+});
+
+console.log(a);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

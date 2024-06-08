@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 500px;
+            width: 500px;
+        }
+        #mass{
+            width: 300px;
+            height: 50px;
+        }
+        #drpdwn{
+            width: 200px;
+            height: 56px;
+            
+        }
+        #btn1{
+            background-color: rgb(99, 91, 91,0.7);
+            color: aliceblue;
+            font-size: 20px;
+            width: 200px;
+            height: 60px;
+            border-radius: 10px; 
+
+        }
+        * {
+            text-align: center;
+        }
+        body{
+            background-image: url(assets/galaxy.gif);
+        }
+        h1{
+            font-size: 50px;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px purple;
+       
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        calculate a weight of an object on a planet
+    </h1>
+    <input type="text" placeholder="mass in kilogram" id="mass" value="">
+    <select name="drpdwn" id="drpdwn">
+        <option value="">select planet</option>
+        <option value="9.807" id="earth">earth</option>
+        <option value="1.62" id="mooon">mooon</option>
+        <option value="3.71" id="mars">mars</option>
+        <option value="3.7" id="mercury">mercury</option>
+        <option value="24.79" id="jupiter">jupiter</option>
+        <option value="11.15" id="neptune">neptune</option>
+        <option value="8.87" id="Uranus">Uranus</option>
+        <option value="0.62" id="pluto">pluto</option>
+        <option value="8.87" id="venus">venus</option>
+    </select>
+    <button id="btn1">
+        calculate weight
+    </button>
+<div id="division">
+
+</div>
+<div id="div">
+
+</div>
+
+  <script src="script.js"></script>
+  <!-- <script src="script1.js"></script> -->
+</body>
+</html>

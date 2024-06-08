@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('%c30 Days Of JavaScript', 'color:green') // log output is green
+console.log(
+  '%c30 Days%c %cOf%c %cJavaScript%c',
+  'color:green',
+  '',
+  'color:red',
+  '',
+  'color:yellow'
+) // log output green red and yellow text
+const names = ['Asabeneh', 'Brook', 'David', 'John']
+const countries = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo']
+]
+const user = {
+  name: 'Asabeneh',
+  title: 'Programmer',
+  country: 'Finland',
+  city: 'Helsinki',
+  age: 250
+}
+const users = [
+  {
+    name: 'Asabeneh',
+    title: 'Programmer',
+    country: 'Finland',
+    city: 'Helsinki',
+    age: 250
+  },
+  {
+    name: 'Eyob',
+    title: 'Teacher',
+    country: 'Sweden',
+    city: 'London',
+    age: 25
+  },
+  {
+    name: 'Asab',
+    title: 'Instructor',
+    country: 'Norway',
+    city: 'Oslo',
+    age: 22
+  },
+  {
+    name: 'Matias',
+    title: 'Developer',
+    country: 'Denmark',
+    city: 'Copenhagen',
+    age: 28
+  }
+]
+
+console.group('Names')
+console.log(names)
+console.groupEnd()
+
+console.group('Countries')
+console.log(countries)
+console.groupEnd()
+
+console.group('Users')
+console.log(user)
+console.log(users)
+console.groupEnd()
+
+console.table(countries)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

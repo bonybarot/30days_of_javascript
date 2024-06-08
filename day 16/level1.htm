@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const skills = ['HTML', 'CSS', 'JS', 'React','Node', 'Python']
+let age = 250;
+let isMarried = true
+const student = {
+  firstName:'Asabeneh',
+  lastName:'Yetayehe',
+  age:250,
+  isMarried:true,
+  skills:['HTML', 'CSS', 'JS', 'React','Node', 'Python', ]
+}
+const txt = `{
+    "Alex": {
+        "email": "alex@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
+    },
+    "Asab": {
+        "email": "asab@asab.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
+    },
+    "Brook": {
+        "email": "daniel@daniel.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Daniel": {
+        "email": "daniel@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "John": {
+        "email": "john@john.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Thomas": {
+        "email": "thomas@thomas.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "Paul": {
+        "email": "paul@paul.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    }
+}
+`
+console.log(JSON.stringify(skills))
+console.log(JSON.stringify(age))
+console.log(JSON.stringify(isMarried))
+console.log(JSON.stringify(student))
+
+//level 2
+console.log(JSON.stringify(student.firstName+" "+student.lastName+" has skills in "+student.skills))
+
+// level 3
+let a = JSON.parse(txt)
+console.log(a)
+let b = Object.values(a)
+console.log(b[0].skills)
+console.log(b.sort((a,b)=>(a.skills.length-1)-(b.skills.length-1)))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

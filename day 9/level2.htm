@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const products = [
+  { product: 'banana', price: 3 },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: 8 },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+
+  let b = products.map((data)=>{
+    return Number(data.price)
+}).reduce((a,b)=>a+b)
+
+console.log(b)
+countries.filter((data)=>{
+    // let b =data.("land") 
+    data.toUpperCase()
+    if(data.includes("land")==true){
+        console.log(data)
+    }
+})
+ console.log(countries.slice(0,3))
+
+// for(i of products){
+//     console.log(i.price)
+// }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

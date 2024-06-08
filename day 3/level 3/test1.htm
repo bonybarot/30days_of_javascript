@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test1.css">
+    <title>Document</title>
+    <script>
+        function clock(){
+        setInterval(
+        function clicked(){
+            let date = new Date()
+            let dd = date.getDate()
+            let mm = date.getMonth()
+            let yy = date.getFullYear()
+            let hr = date.getHours()
+            let zone = "AM"
+            let min = date.getMinutes()
+            let sec = date.getSeconds()
+            let mil = date.getMilliseconds()
+            let day = date.getDay()
+            let dayarr = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+            let daysen="Today is "+dayarr[day];
+            if(hr>12){
+                hr = hr-12
+                zone = "PM"
+            }
+            document.getElementById("demo").innerHTML=daysen 
+            document.getElementById("date").innerHTML="Date is : "+dd+" / "+mm+" / "+yy
+            document.getElementById("demo1").innerHTML= "current time is :"+hr + " "+zone+ " : "+ min + "minutes : "+ sec + " seconds "+mil+ " milliseconds" 
+         
+        },100)
+    }
+    </script>
+</head>
+<body>
+    <div class="clock">
+        <p id="demo"></p>  
+        <p id="date"></p> 
+        <p id="demo1"></p>
+    </div>
+    
+     <button class="btn" onclick="clock()">click here to know date & time</button>
+   
+</body>
+</html>

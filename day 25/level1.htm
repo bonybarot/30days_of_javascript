@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style  >
+        button{
+            border: orange;
+            height: 25px;
+           width: 100px;
+            margin: 20px;
+            background-color: orange;
+        }
+        body{
+            text-align: center;
+        }
+        h1{
+            color: orange;
+        }
+        #thirddiv{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+        #sentence{
+            padding: 25px;
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="firstdiv">
+
+        <h1>World Countries Data</h1>
+        <p >currently, we have <span id="Countrieslength">250</span> countries</p>
+    </div>
+    <div id="seconddiv">
+
+        <button value="population" onclick="population()">population</button>
+        <button value="languages" onclick="languages()">languages</button>
+    </div>
+    <div id="sentence"></div>
+    <div id="thirddiv">
+
+    </div>
+    
+    
+    <script >
+        let countriesAPI="https://restcountries.com/v2/all";
+
+
+
+population=async()=>{
+    document.getElementById("thirddiv").innerHTML=""
+    var d =  await fetch(countriesAPI)
+    var res = await d.json()
+    console.log(res)
+       let a = []
+    for(let i of res){
+       a.push(i)
+    // console.log(i.population)
+    }
+    a.sort((a,b)=>b.population-a.population)
+    let p =a.slice(0,10)
+    console.log(p)
+    document.getElementById("sentence").innerText = "10 most populated countries in the world"
+    for(let k of p){    
+       let name = document.createElement("div");
+       let population = document.createElement("div");
+       let bar = document.createElement("div");
+       bar.style.background = "orange"
+       bar.style.border = "orange"
+       bar.style.height = "20px"   
+       bar.style.width = `${k.population/10000000*5}px`
+       name.style.textAlign="start"
+       population.style.textAlign="end"
+        name.textContent=k.name
+        population.textContent=k.population
+        document.getElementById("thirddiv").appendChild(name)
+        document.getElementById("thirddiv").appendChild(bar)
+        document.getElementById("thirddiv").appendChild(population)
+
+    }
+    
+}
+
+
+ languages=async ()=>{
+    document.getElementById("thirddiv").innerHTML=""
+    var d =  await fetch(countriesAPI)
+    var res = await d.json()
+   let a =[]
+    for(let i of res){
+        // a.push(i.languages[0].name)
+        for(let j of i.languages){
+            a.push(j.name)
+        }
+    }
+    // console.log(a);
+       
+    a.sort();
+var count = 1;
+var results = "";
+let k = []
+for (var i = 0; i < a.length; i++)
+{
+    if (a[i] == a[i+1])
+    {
+      count +=1;
+    }
+    else
+    {
+        k.push({name:a[i],count:count})
+        results += a[i] + " --> " + count + " times\n" ;
+        count=1;
+    } 
+}
+console.log(k)
+k.sort((a,b)=>(b.count)-(a.count))
+k.splice(10)
+
+for (let iterator of k){
+    let name = document.createElement("div");
+       let countoflang = document.createElement("div");
+       let bar = document.createElement("div");
+       bar.style.background = "orange"
+       bar.style.border = "orange"
+       bar.style.height = "20px"   
+       bar.style.width = `${iterator.count*10}px`
+       name.style.textAlign="start"
+       countoflang.style.textAlign="end"
+        name.textContent=iterator.name
+        countoflang.textContent=iterator.count
+        document.getElementById("thirddiv").appendChild(name)
+        document.getElementById("thirddiv").appendChild(bar)
+        document.getElementById("thirddiv").appendChild(countoflang)
+}
+// document.getElementById("thirddiv").innerText=k.name + "" +k.count
+
+}
+    </script>
+</body>
+</html>

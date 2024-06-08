@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function outerfunc(){
+            let a = 0;
+            function add(){
+                a++
+                return a
+            }
+            function mul(){
+                a*a
+                return a
+            }
+            function sub(){
+                a--
+                return a
+            }
+
+            return {
+                add:add,
+                mul:mul,
+                sub:sub
+            }
+        }
+        innerfunc =outerfunc()
+        console.log(innerfunc.add())
+        console.log(innerfunc.mul())
+        console.log(innerfunc.sub())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

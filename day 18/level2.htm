@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+            let fetchdata=async()=>{
+         try {
+    const response = await fetch(catsAPI)
+    const cats = await response.json()
+    var k =[]
+    for(let i of cats){
+        k.push(i.name)
+    }
+    console.log(k)
+
+  } catch (err) {
+    console.error(err)
+  }
+    }
+    fetchdata()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

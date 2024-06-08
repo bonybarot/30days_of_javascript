@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+        
+        class statistics{
+            constructor(ages){
+              this.ages = ages
+            }
+            count(){
+              return ages.length
+            }
+            sum(){
+              return ages.reduce((a,b)=>a+b)
+            }
+            min(){
+              return ages.sort((a,b)=>a-b)[0]
+            }
+            max(){
+              return ages.sort((a,b)=>a+b)[ages.length-1]
+            }
+            range(){
+              return (ages.sort((a,b)=>a+b)[ages.length-1])-(ages.sort((a,b)=>a-b)[0])
+            }
+           
+
+        }
+        let a = new statistics(ages)
+        console.log(a.count())
+        console.log(a.sum())
+        console.log(a.min())
+        console.log(a.max())
+        console.log(a.range())
+
+
+class PersonAccount {
+    constructor(firstname, lastname, incomes, expenses) {
+        this.firstname = firstname
+        this.lastname = lastname
+        this.incomes = incomes
+        this.expenses = expenses
+        this.accountBalance = 0
+    }
+    totalIncome() {
+        return this.incomes.reduce((a, b) => a + b)
+    }
+    totalExpences() {
+        return this.expenses.reduce((a, b) => a + b)
+    }
+    set addIncomes(newincomes) {
+        this.incomes.push(newincomes)
+    }
+    set addExpence(nExpence) {
+        this.expenses.push(nExpence)
+    }
+    checkAccountBalance() {
+        // return (this.incomes.reduce((a, b) => a + b))-(this.expenses.reduce((a, b) => a + b))
+        return this.totalIncome()-this.totalExpences()
+    }
+    accountInfo() {
+        return `
+          ==>Account Info
+          Name : ${this.firstname} ${this.lastname}
+          Balance : ${this.checkAccountBalance()}
+          income : ${this.totalIncome()}
+          Expences : ${this.totalExpences()}
+        `
+    }
+}
+
+const p1 = new PersonAccount("abc", "xyz", [2000, 5000, 6000], [1000, 5000])
+
+console.log(p1.totalIncome());
+console.log(p1.totalExpences());
+
+// p1.addIncomes = 10000
+console.log(p1.totalIncome());
+p1.addExpence = 5000
+console.log(p1.totalExpences());
+console.log(p1.checkAccountBalance());
+console.log(p1.accountInfo());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

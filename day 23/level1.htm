@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Object Model:30 Days Of JavaScript</title>
+    <style>
+      input{
+        width: 500px;
+        border: green solid;
+        height: 38px;
+      }
+      button{ 
+        color: aliceblue;
+        border: green ;
+        background-color: green;
+        padding: 15px 32px;
+
+      }
+          div{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border: 2px solid;
+            text-align: center;
+            line-height: 100px;
+        }
+        #division{
+          display: grid;
+          grid-template-columns: auto auto auto auto auto auto;
+        }
+        </style>
+</head>
+
+<body>
+  <h1>Number genrator</h1>
+  
+  <input type="text" id="inp" placeholder="write a number"/>
+  <button>generate a number</button>
+  <section id="division"></section>
+  
+  <script>
+      let a =[]
+        const inp = document.querySelector('input')
+        const btn = document.querySelector('button')
+       
+      btn.addEventListener('click', e => {
+          
+while( a.length<=inp.value){
+  let  dd = document.createElement('div')
+
+var num =Math.ceil(Math.random()*100) 
+if(!a.includes(num)){
+    a.push(num)
+    dd.textContent = num
+   document.getElementById("division").appendChild(dd)
+    for(let i =0;i<inp.value;i++){
+        
+            if(num%2==0){
+                dd.style.background = "green"
+            }else{
+                dd.style.background = "yellow"
+
+            }
+        }
+    }
+  
+}
+      })
+        const input = document.querySelector('input')
+        const p = document.querySelector('p')
+        const b = document.querySelector('button')
+      console.log(inp)
+  
+
+ 
+        console.log(a)
+   
+    </script>
+</body>
+
+</html>

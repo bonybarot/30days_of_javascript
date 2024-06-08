@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function outerfunc(){
+            let a = 0;
+            function sum(){
+                a++
+                return a
+            }
+            return sum
+        }
+        sum =outerfunc()
+        console.log(sum())
+        console.log(sum())
+        console.log(sum())
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

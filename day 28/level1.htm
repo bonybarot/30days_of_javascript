@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        text-align: center;
+        width: 100%;
+    }
+    input{
+        height: 40px;
+        border: darksalmon solid;
+    }
+    #add{
+        height: 50px;
+        width: 10%;
+        color: white;
+        background-color: darksalmon;
+    }
+    div{
+        background-color: darksalmon;
+    }
+    #abc{
+        border-radius: 10px;
+        border-radius: 50%;
+    }
+    td{
+        padding: 25px;
+        
+    }
+    tr{
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    <h1>30 days of javascript challenge dashboard</h1>
+    <input type="text" placeholder="first name" id="first">
+    <input type="text" placeholder="last name" id="last">
+    <input type="text" placeholder="country" id="country">
+    <input type="text" placeholder="player score" id="score">
+    <button id="add" onclick="add()">add player</button>
+    <div id="firstdiv">
+        <table>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>

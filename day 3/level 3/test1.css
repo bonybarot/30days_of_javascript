@@ -1,0 +1,14 @@
+.clock {
+    color: aliceblue;
+    background: rgb(0, 0, 0)  ;
+    width: 500px;
+    height: 100px;
+    margin-left: 35%;
+}
+.btn{
+    background-color: #187bd2;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-left: 45%;
+}
